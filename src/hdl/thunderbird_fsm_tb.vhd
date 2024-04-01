@@ -106,8 +106,9 @@ begin
         begin
         w_reset <= '1'; 
         wait for k_clk_period*1;
-            assert w_stoplight = "000" report "bad reset" severity failure;
-                
+            assert w_lights_L = "000" report "bad reset left" severity failure;
+            assert w_lights_R = "000" report "bad reset right" severity failure;
+            
         w_reset <= '0';
         wait for k_clk_period*1;
         
