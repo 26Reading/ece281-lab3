@@ -134,11 +134,11 @@ begin
    o_lights_R(0) <= (not f_S(2) and not f_S(1) and f_S(0))
                  or (not f_S(2) and f_S(1) and not f_S(0))
                  or (not f_S(2) and f_S(1) and f_S(0))
-                 or (f_S(2) and f_S(1) and not f_S(0));
+                 or (f_S(2) and not f_S(1) and not f_S(0));
        
    o_lights_R(1) <= (not f_S(2) and not f_S(1) and f_S(0))
                  or (not f_S(2) and f_S(1) and f_S(0))
-                 or (f_S(2) and not f_S(1) and f_S(0));
+                 or (f_S(2) and not f_S(1) and not f_S(0));
   
   o_lights_R(2) <= (not f_S(2) and not f_S(1) and f_S(0))
                 or (f_S(2) and not f_S(1) and not f_S(0));
